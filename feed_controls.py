@@ -12,6 +12,7 @@ load_dotenv()
 # YOUR bluesky handle
 # Ex: user.bsky.social
 HANDLE: str = os.environ.get('HANDLE')
+LOGIN_URL: str = os.environ.get('LOGIN_URL')
 
 # YOUR bluesky password, or preferably an App Password (found in your client settings)
 # Ex: abcd-1234-efgh-5678
@@ -46,11 +47,13 @@ SERVICE_DID: str = os.environ.get('SERVICE_DID')
 # NO NEED TO TOUCH ANYTHING BELOW HERE
 # -------------------------------------
 
-
-def main():
+if LOGIN_URL is not None:
+    client = Client(base_url=LOGIN_URL)
+else:
     client = Client()
-    client.login(HANDLE, PASSWORD)
+client.login(HANDLE, PASSWORD)
 
+def publish():
     feed_did = SERVICE_DID
     if not feed_did:
         feed_did = f'did:web:{HOSTNAME}'
@@ -77,6 +80,21 @@ def main():
     print('Successfully published!')
     print('Feed URI (put in "FEED_URI" env var):', response.uri)
 
+def delete():
+    feed_did = SERVICE_DID
+    if not feed_did:
+        feed_did = f'did:web:{HOSTNAME}'
+
+    response = client.com.atproto.repo.delete_record(
+        data={
+            'repo': client.me.did,
+            'collection': models.ids.AppBskyFeedGenerator,
+            'rkey': RECORD_NAME
+        }
+    )
+
+    print(response)
+    print('Successfully deleted!')
 
 if __name__ == '__main__':
-    main()
+    publish()

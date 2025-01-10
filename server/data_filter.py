@@ -17,7 +17,7 @@ def operations_callback(ops: defaultdict) -> None:
     for created_post in ops[models.ids.AppBskyFeedPost]['created']:
         author = created_post['author']
         record = created_post['record']
-
+        '''
         # print all texts just as demo that data stream works
         post_with_images = isinstance(record.embed, models.AppBskyEmbedImages.Main)
         inlined_text = record.text.replace('\n', ' ')
@@ -28,7 +28,7 @@ def operations_callback(ops: defaultdict) -> None:
             f'[WITH_IMAGE={post_with_images}]'
             f': {inlined_text}'
         )
-
+        '''
         # only python-related posts
         if 'python' in record.text.lower():
             reply_root = reply_parent = None
