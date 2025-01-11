@@ -6,6 +6,7 @@ import os
 
 from dotenv import load_dotenv
 from atproto import Client, models
+import argparse
 
 load_dotenv()
 
@@ -97,4 +98,12 @@ def delete():
     print('Successfully deleted!')
 
 if __name__ == '__main__':
-    delete()
+    parser = argparse.ArgumentParser(description='Publish or delete a feed.')
+    parser.add_argument('action', choices=['publish', 'delete'], help='Action to perform')
+    args = parser.parse_args()
+    if args.action == 'publish':
+        publish()
+    elif args.action == 'delete':
+        delete()
+    else:
+        parser.print_help()
