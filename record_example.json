@@ -1,0 +1,60 @@
+{
+    "created_at": "2025-01-10T04:52:17.064Z",
+    "text": "My journey was something like this\n\n1. Jonas Peters introductory lectures\n2. Judeal Pearl's Book of Why, causality and Primer\n3. Rubin's PO, Angrist, Imbens work on IV\n4. Hernan and Robin's What If book\n5. Coding causal models with R/Python (dagitty, doWhy, econML)\n6. Causality in LLMs\n\n#CausalSky",
+    "embed": {
+      "images": [
+        {
+          "alt": "",
+          "blob_ref": {
+            "mime_type": "image/jpeg",
+            "size": 352302,
+            "ref": "\\x01U\\x12 \\xa9t3\\xc7yE\\xee\n\\x92\n\\x1eH~\\xa68\\xfe\\xf6\\xc5\\xf72\\xcf\\xbd\\xff\\xf0\\xbb\\x19\\xf85<\\xb6\\xcf\\xb0",
+            "py_type": "blob"
+          },
+          "aspect_ratio": {
+            "height": 1000,
+            "width": 706,
+            "py_type": "app.bsky.embed.defs#aspectRatio"
+          },
+          "py_type": "app.bsky.embed.images#image"
+        }
+      ]
+    },
+    "entities": null,
+    "facets": [
+      {
+        "features": [
+          {
+            "tag": "CausalSky",
+            "py_type": "app.bsky.richtext.facet#tag"
+          }
+        ],
+        "index": {
+          "byte_end": 298,
+          "byte_start": 288,
+          "py_type": "app.bsky.richtext.facet#byteSlice"
+        },
+        "py_type": "app.bsky.richtext.facet"
+      }
+    ],
+    "labels": null,
+    "langs": [
+      "en"
+    ],
+    "reply": {
+      "parent": {
+        "cid": "bafyreic7lba6gy7hoxmiaiygti4ql34v4snyk457pi6bdioricnz5sywjy",
+        "uri": "at://did:plc:2sajhwv2fixuaf36miguiu3w/app.bsky.feed.post/3lfefhymb4226",
+        "py_type": "com.atproto.repo.strongRef"
+      },
+      "root": {
+        "cid": "bafyreic7lba6gy7hoxmiaiygti4ql34v4snyk457pi6bdioricnz5sywjy",
+        "uri": "at://did:plc:2sajhwv2fixuaf36miguiu3w/app.bsky.feed.post/3lfefhymb4226",
+        "py_type": "com.atproto.repo.strongRef"
+      },
+      "py_type": "app.bsky.feed.post#replyRef"
+    },
+    "tags": null,
+    "py_type": "app.bsky.feed.post"
+  }
+  

@@ -97,4 +97,4 @@ def delete():
     print('Successfully deleted!')
 
 if __name__ == '__main__':
-    publish()
+    delete()
